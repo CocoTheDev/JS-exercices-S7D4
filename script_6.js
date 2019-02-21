@@ -16,12 +16,36 @@ const entrepreneurs = [
 ];
 
 
-var list1 = [];
-entrepreneurs.forEach(items => {
-  let seventies = /[1970-1979]/;
-  if(items.includes(seventies)){
-    list1 = items;} 
+console.log("Filtre dans cette liste les entrepreneurs qui sont nés dans les années 70");
+entrepreneurs.forEach(element => {
+if(element.year > 1969 && element.year < 1980)
+  console.log(element);
 });
-console.log(list1);
+
+
+console.log("Sors une array qui combien le prénom et le nom des entrepreneurs");
+entrepreneurs.forEach(element => {
+console.log(element.first + " " + element.last);
+});
+
+
+console.log("Quel âge aurait chaque inventeur aujourd'hui ?");
+entrepreneurs.forEach(element => {
+let agenow = 2019 - element.year
+    console.log("Age qu'il aurait aujourd'hui : " +agenow);
+})
+
+
+console.log("Trie les inventeurs par ordre alphabétique du nom de famille");
+let sortLast = entrepreneurs.sort(function(a,b) {
+  if(a.last < b.last) {return -1;}
+  if(a.last > b.last) {return 1;}
+  return 0;
+})
+console.log(sortLast);
+
+
+
+
 
 
