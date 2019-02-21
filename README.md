@@ -1,4 +1,4 @@
-# Exercice en JS
+# Exercices en JS
 
 ## équipe : 
 
